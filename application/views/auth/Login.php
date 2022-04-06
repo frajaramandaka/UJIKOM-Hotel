@@ -18,47 +18,8 @@
 	</head>
 	<body style="background-image:url('<?= base_url('assets/image/gambar hotel(1).jpg'); ?>');">
 
-    <header>
-   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: DarkTurquoise;">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="<?= base_url('Tamu/Beranda')?>">Hotel Hebat</a>
-    <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/CaraPesan'); ?>">Cara Pesan</a>
-        </li>
-    </ul>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/History'); ?>">History</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('Tamu/Kamar'); ?>">Kamar</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Fasilitas
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="<?= base_url('Tamu/FasilitasKamar'); ?>">Fasilitas Kamar</a></li>
-            <li><a class="dropdown-item" href="<?= base_url('Tamu/FasilitasHotel'); ?>">Fasilitas Hotel</a></li>
-          </ul>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('Tamu/PesanKamar'); ?>">Pesan Kamar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<?= base_url('Tamu/Login'); ?>">Login</a>
-        </li>
-        </li>
-      </ul>
-    </div>
-    
-  </div>
-</nav>
-    </header>
+    <!-- Header -->
+    <?php $this->load->view('tamu/_partials/Header.php')?>
 
 	<section class="ftco-section">
 		<div class="container" >
@@ -74,7 +35,7 @@
 							<div class="text w-100">
 								<h2>Selamat Datang</h2>
 								<p>Belum punya akun?</p>
-								<a href="#" class="btn btn-white btn-outline-white">Sign Up</a>
+								<a href="<?= base_url('Auth/Registrasi');?>" class="btn btn-white btn-outline-white">Sign Up</a>
 							</div>
 			      </div>
 						<div class="login-wrap p-4 p-lg-5">

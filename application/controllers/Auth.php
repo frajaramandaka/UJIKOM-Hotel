@@ -6,4 +6,12 @@ class Auth extends CI_Controller {
 	{
 		$this->load->view('Beranda');
 	}
+	public function Login()
+    {
+        $this->load->view('auth/Login');
+    }
+	public function Registrasi()
+    {
+        $this->load->view('auth/Registrasi');
+    }
 }
