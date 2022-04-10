@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.1.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2022 at 04:29 AM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 7.3.31
+-- Waktu pembuatan: 07 Apr 2022 pada 06.26
+-- Versi server: 10.4.24-MariaDB
+-- Versi PHP: 7.4.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fasilitas_hotel`
+-- Struktur dari tabel `fasilitas_hotel`
 --
 
 CREATE TABLE `fasilitas_hotel` (
@@ -37,7 +37,7 @@ CREATE TABLE `fasilitas_hotel` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fasilitas_kamar`
+-- Struktur dari tabel `fasilitas_kamar`
 --
 
 CREATE TABLE `fasilitas_kamar` (
@@ -51,20 +51,24 @@ CREATE TABLE `fasilitas_kamar` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `login`
+-- Struktur dari tabel `login`
 --
 
 CREATE TABLE `login` (
   `id_login` int(11) NOT NULL,
   `username` varchar(35) NOT NULL,
   `password` varchar(35) NOT NULL,
-  `level` enum('admin','resepsionis','tamu') NOT NULL
+  `level` enum('admin','resepsionis','tamu') NOT NULL,
+  `tgl_lahir` date NOT NULL,
+  `nowa` varchar(50) NOT NULL,
+  `jenis_kelamin` enum('laki-laki','perempuan') NOT NULL,
+  `nama` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pemesanan`
+-- Struktur dari tabel `pemesanan`
 --
 
 CREATE TABLE `pemesanan` (
@@ -76,13 +80,15 @@ CREATE TABLE `pemesanan` (
   `id_kamar` int(11) NOT NULL,
   `tgl_cekin` date NOT NULL,
   `tgl_cekout` date NOT NULL,
-  `jml_kamar` int(11) NOT NULL
+  `jml_kamar` int(11) NOT NULL,
+  `tipe_kamar` varchar(50) NOT NULL,
+  `harga` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipe`
+-- Struktur dari tabel `tipe`
 --
 
 CREATE TABLE `tipe` (
@@ -93,14 +99,15 @@ CREATE TABLE `tipe` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipe_kamar`
+-- Struktur dari tabel `tipe_kamar`
 --
 
 CREATE TABLE `tipe_kamar` (
   `id_kamar` int(11) NOT NULL,
   `id_tipe` int(11) NOT NULL,
   `jml_kamar` int(11) NOT NULL,
-  `gambar_tipekamar` text NOT NULL
+  `gambar_tipekamar` text NOT NULL,
+  `harga` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -108,102 +115,102 @@ CREATE TABLE `tipe_kamar` (
 --
 
 --
--- Indexes for table `fasilitas_hotel`
+-- Indeks untuk tabel `fasilitas_hotel`
 --
 ALTER TABLE `fasilitas_hotel`
   ADD PRIMARY KEY (`id_fashotel`);
 
 --
--- Indexes for table `fasilitas_kamar`
+-- Indeks untuk tabel `fasilitas_kamar`
 --
 ALTER TABLE `fasilitas_kamar`
   ADD PRIMARY KEY (`id_faskamar`),
   ADD KEY `id_kamar` (`id_kamar`);
 
 --
--- Indexes for table `login`
+-- Indeks untuk tabel `login`
 --
 ALTER TABLE `login`
   ADD PRIMARY KEY (`id_login`);
 
 --
--- Indexes for table `pemesanan`
+-- Indeks untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
   ADD PRIMARY KEY (`id_pemesanan`),
   ADD KEY `id_kamar` (`id_kamar`);
 
 --
--- Indexes for table `tipe`
+-- Indeks untuk tabel `tipe`
 --
 ALTER TABLE `tipe`
   ADD PRIMARY KEY (`id_tipe`);
 
 --
--- Indexes for table `tipe_kamar`
+-- Indeks untuk tabel `tipe_kamar`
 --
 ALTER TABLE `tipe_kamar`
   ADD PRIMARY KEY (`id_kamar`),
   ADD KEY `id_tipe` (`id_tipe`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `fasilitas_hotel`
+-- AUTO_INCREMENT untuk tabel `fasilitas_hotel`
 --
 ALTER TABLE `fasilitas_hotel`
   MODIFY `id_fashotel` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `fasilitas_kamar`
+-- AUTO_INCREMENT untuk tabel `fasilitas_kamar`
 --
 ALTER TABLE `fasilitas_kamar`
   MODIFY `id_faskamar` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `login`
+-- AUTO_INCREMENT untuk tabel `login`
 --
 ALTER TABLE `login`
   MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `pemesanan`
+-- AUTO_INCREMENT untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
   MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tipe`
+-- AUTO_INCREMENT untuk tabel `tipe`
 --
 ALTER TABLE `tipe`
   MODIFY `id_tipe` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tipe_kamar`
+-- AUTO_INCREMENT untuk tabel `tipe_kamar`
 --
 ALTER TABLE `tipe_kamar`
   MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `fasilitas_kamar`
+-- Ketidakleluasaan untuk tabel `fasilitas_kamar`
 --
 ALTER TABLE `fasilitas_kamar`
   ADD CONSTRAINT `fasilitas_kamar_ibfk_1` FOREIGN KEY (`id_kamar`) REFERENCES `tipe_kamar` (`id_kamar`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `pemesanan`
+-- Ketidakleluasaan untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
   ADD CONSTRAINT `pemesanan_ibfk_1` FOREIGN KEY (`id_kamar`) REFERENCES `tipe_kamar` (`id_kamar`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `tipe_kamar`
+-- Ketidakleluasaan untuk tabel `tipe_kamar`
 --
 ALTER TABLE `tipe_kamar`
   ADD CONSTRAINT `tipe_kamar_ibfk_1` FOREIGN KEY (`id_tipe`) REFERENCES `tipe` (`id_tipe`) ON DELETE CASCADE ON UPDATE CASCADE;
