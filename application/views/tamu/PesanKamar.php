@@ -11,73 +11,65 @@
     <title>Hotel Hebat/Pesan Kamar</title>
 </head>
 <body>
+  <!-- Header -->
+  <?php $this->load->view('tamu/_partials/Header.php')?>
 
-    <header>
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: DarkTurquoise;">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="<?= base_url('Tamu/Beranda'); ?>">Hotel Hebat</a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/CaraPesan'); ?>">Cara Pesan</a>
-            </li>
-        </ul>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/History'); ?>">History</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('Tamu/Kamar'); ?>">Kamar</a>
-            </li>
-            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Fasilitas
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="dropdown-item" href="<?= base_url('Tamu/FasilitasKamar'); ?>">Fasilitas Kamar</a></li>
-                <li><a class="dropdown-item" href="<?= base_url('Tamu/FasilitasHotel'); ?>">Fasilitas Hotel</a></li>
-            </ul>
-            <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('Tamu/PesanKamar'); ?>" data-toggle="modal" data-target="#exampleModal">Pesan Kamar</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('Tamu/Login'); ?>">Login</a>
-            </li>
-            </li>
-        </ul>
-        </div>
-        
+  <div class="container-lg">
+    <div class="card mt-3">
+  <h5 class="card-header d-flex justify-content-center p-3">Pesan Kamar</h5>
+  <div class="card-body">
+  <div class="row">
+  <div class="col-sm-12">
+  <form>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="inputEmail4">Nama Pemesan :</label>
+      <input type="text" class="form-control" id="inputEmail4" placeholder="">
     </div>
-    </nav>
-        </header>
-        
-        <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+    <div class="form-group col-md-12">
+      <label for="inputAddress">Tipe Kamar :</label>
+      <select class="form-control">
+        <option selected>Pilih Tipe :</option>
+        <option >Regular Room</option>
+        <option >Silver Room</option>
+        <option >Gold Room</option>
+        <option >Platinum Room</option>
+      </select>
     </div>
   </div>
-</div>
-</body>
+  <div class="form-group col-md-12">
+    <label for="inputAddress">Tanggal Check-in :</label>
+    <input type="date" class="form-control" id="inputAddress" placeholder="">
+  </div>
+  <div class="form-group col-md-12">
+    <label for="inputAddress2">Tanggal Check-out :</label>
+    <input type="date" class="form-control" id="inputAddress2" placeholder="">
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="inputCity">Jumlah Kamar :</label>
+      <input type="number" class="form-control" id="">
+    </div>
+    <div class="form-group col-md-12">
+      <label for="inputEmail4">Nama Tamu :</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="">
+    </div>
+    <div class="form-group col-md-12">
+      <label for="inputEmail4">Email :</label>
+      <input type="email" class="form-control" id="inputEmail4" placeholder="contoh : hotelhebat@gmail.com">
+    </div>
+    <div class="form-group col-md-12">
+      <label for="inputEmail4">Nomor Whatsapp :</label>
+      <input type="number" class="form-control" id="inputEmail4" placeholder="08xxxxxxxxxxx">
+    </div>
+    </div>
+    </div>
+    </div>
+   <button type="submit" class="btn btn-primary mt-3">Pesan</button>
+  </form>
+
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
 </html>
