@@ -25,7 +25,7 @@
 		<div class="container" >
 			<div class="row justify-content-center">
 				<div class="col-md-6 text-center" style="margin-bottom:-8px;">
-					<h2 class="heading-section p-3" style="background-color:white; margin: 0px -190px 0px -190px;">Hotel Hebat</h2>
+					<h2 class="heading-section p-3 text-light" style="background-color:rgba(rgb(255, 99, 71,0.5)); margin: 0px -190px 0px -190px;">Hotel Hebat</h2>
 				</div>
 			</div>
 			<div class="row justify-content-center">

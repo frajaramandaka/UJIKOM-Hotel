@@ -30,4 +30,23 @@ class Tamu extends CI_Controller {
     {
         $this->load->view('Tamu/FasilitasHotel');
     }
+
+    public function KirimData()
+    {
+        $query = $this->db->get('tipe_kamar')->result();
+        // var_dump($query);die;
+        $total_harga = $_POST['jml_kamar']*$query[0]->harga;
+        $data = array(
+            'nama_pemesan' => $_POST['nama_pemesan'],
+            'id_kamar' => $_POST['id_kamar'],
+            'tgl_cekin' => $_POST['tgl_cekin'],
+            'tgl_cekout' => $_POST['tgl_cekout'],
+            'jml_kamar' => $_POST['jml_kamar'],
+            'nama_tamu' => $_POST['nama_tamu'],
+            'email' => $_POST['email'],
+            'no_hp' => $_POST['no_hp']
+        );
+        $this->db->insert('pemesanan',$data);
+        redirect('Tamu/History');
+    }
 }
