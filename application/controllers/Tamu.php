@@ -12,7 +12,9 @@ class Tamu extends CI_Controller {
     }
     public function History()
     {
-        $this->load->view('Tamu/History');
+        $data['datapesanan']=$this->db->get('pemesanan')->result();
+        
+        $this->load->view('Tamu/History',$data);
     }
     public function Kamar()
     {

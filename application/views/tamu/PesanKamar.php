@@ -69,7 +69,7 @@
     </div>
     </div>
     </div>
-   <button type="submit" class="btn btn-primary mt-3">Pesan</button>
+   <a type="submit" class="btn btn-primary mt-3">Pesan</a>
   </form>
 
   
