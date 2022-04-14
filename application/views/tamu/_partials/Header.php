@@ -15,7 +15,7 @@
     <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/History'); ?>">History</a>
+          <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/History'); ?>">Pesanan Saya</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('Tamu/Kamar'); ?>">Kamar</a>
@@ -77,7 +77,7 @@
     <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/History'); ?>">History</a>
+          <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/History'); ?>">Pesanan Saya</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('Tamu/Kamar'); ?>">Kamar</a>

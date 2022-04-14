@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-5">
-                <h5><i class="fa fa-road"></i> Hotel Hebat</h5>
+                <h5 id="judul"><i class="fa fa-road"></i> Hotel Hebat</h5>
                 <div class="row">
                     <div class="col-6">
                         <ul class="list-unstyled">

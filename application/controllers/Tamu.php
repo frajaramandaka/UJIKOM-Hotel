@@ -13,7 +13,6 @@ class Tamu extends CI_Controller {
     public function History()
     {
         $data['datapesanan']=$this->db->get('pemesanan')->result();
-        
         $this->load->view('Tamu/History',$data);
     }
     public function Kamar()
@@ -31,6 +30,10 @@ class Tamu extends CI_Controller {
     public function FasilitasHotel()
     {
         $this->load->view('Tamu/FasilitasHotel');
+    }
+    public function Riwayat()
+    {
+        $this->load->view('Tamu/Riwayat');
     }
 
     public function KirimData()

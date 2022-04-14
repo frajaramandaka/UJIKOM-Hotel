@@ -38,6 +38,7 @@
                         <h3>Reguler Room</h3>
                         
                         <p class="card-text"> 1 Kasur Tidur <br> Rp.350.000,-</p>
+                        
                     </div>
                 </div>
                 
@@ -106,6 +107,7 @@
                     <div class="card-body">
                         <h3>Silver Room</h3>
                         <p class="card-text"> 2 Kasur Tidur Terpisah <br> Rp.500.000,-</p>
+                        
                     </div>
                 </div>
                 

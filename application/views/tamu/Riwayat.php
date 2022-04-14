@@ -22,10 +22,10 @@
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
-        <a class="nav-link active" href="<?= base_url('Tamu/History'); ?>">Data Pesanan</a>
+        <a class="nav-link active" href="#DataPesanan">Data Pesanan</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('Tamu/Riwayat'); ?>">Riwayat Pesanan</a>
+        <a class="nav-link" href="#RiwayatPesanan">Riwayat Pesanan</a>
       </li>
     </ul>
   </div>
