@@ -22,10 +22,10 @@
   <div class="card-header">
     <ul class="nav nav-pills card-header-pills">
       <li class="nav-item">
-        <a class="nav-link" href="<?= base_url('Tamu/DataPesanan');?>">Data Pesanan</a>
+        <a class="nav-link active" href="<?= base_url('Tamu/DataPesanan');?>">Data Pesanan</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link active" href="<?= base_url('Tamu/Riwayat');?>">Riwayat Pesanan</a>
+        <a class="nav-link" href="<?= base_url('Tamu/Riwayat');?>">Riwayat Pesanan</a>
       </li>
     </ul>
   </div>
@@ -51,38 +51,18 @@
                   <a href="<?= base_url('Auth/Login');?>" type="submit" class="btn btn-primary">Login</a>
               </div>
     <?php else :?>
-      <table class="table table-bordered table-striped">
-        <thread>
-          <tr>
-            <th style=""></th>
-            <th style="width">Nama Pemesan</th>
-            <th style="width">Tipe Kamar</th>
-            <th style="width">Tanggal Check-in</th>
-            <th style="width">Tanggal Check-out</th>
-            <th style="width">Jumlah kamar</th>
-            <th style="width">Nama Tamu</th>
-            <th style="width">Email</th>
-            <th style="width">Nomor Whatsapp</th>
-            <th style=""></th>
-          </tr>
-          <tbody>
-            <?php foreach($datariwayat as $data):?>
-              <tr>
-              <td width="50"><img class="card-img-top" src="<?= base_url('assets/image/').$data->gambar_tipekamar?>" alt="Card image cap" ></td>
-              <td><?= $data->nama_pemesan?></td>
-              <td><?= $data->tipe_kamar?></td>
-              <td><?= $data->tgl_cekin?></td>
-              <td><?= $data->tgl_cekout?></td>
-              <td><?= $data->jml_kamar?></td>
-              <td><?= $data->nama_tamu?></td>
-              <td><?= $data->email?></td>
-              <td><?= $data->no_hp?></td>
-              <td><button type="submit" class="btn btn-primary">Cetak PDF</button></td>
-            </tr>
-            <?php endforeach;?>
-          </tbody>
-        </thread>
-      </table>
+        <?php foreach($datapesanan as $data) :?>
+            <?php if($data->status == 'checkin'):?>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="<?= base_url('assets/image/').$data->gambar_tipekamar?>" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="<?= base_url('Tamu/UbahStatus').'?status=checkout&id='.$data->id_pemesanan;?>" class="btn btn-primary">Check-out</a>
+                    </div>
+                </div>
+            <?php endif;?>
+        <?php endforeach;?>
     <?php endif ;?>  
 
   </div>

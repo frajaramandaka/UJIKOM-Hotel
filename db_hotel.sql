@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 07 Apr 2022 pada 06.26
--- Versi server: 10.4.24-MariaDB
--- Versi PHP: 7.4.28
+-- Waktu pembuatan: 16 Apr 2022 pada 07.14
+-- Versi server: 10.4.18-MariaDB
+-- Versi PHP: 7.3.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -65,6 +65,15 @@ CREATE TABLE `login` (
   `nama` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data untuk tabel `login`
+--
+
+INSERT INTO `login` (`id_login`, `username`, `password`, `level`, `tgl_lahir`, `nowa`, `jenis_kelamin`, `nama`) VALUES
+(1, 'fraja', '123', 'tamu', '2022-04-01', '083112345678', 'laki-laki', 'Frajaramandaka'),
+(4, 'resepsionis', '12345', 'resepsionis', '2022-04-01', '081236523874', 'perempuan', 'resepsionis'),
+(5, 'admin', '12345678', 'admin', '2022-04-02', '0865419856', 'laki-laki', 'admin');
+
 -- --------------------------------------------------------
 
 --
@@ -82,8 +91,17 @@ CREATE TABLE `pemesanan` (
   `tgl_cekout` date NOT NULL,
   `jml_kamar` int(11) NOT NULL,
   `tipe_kamar` varchar(50) NOT NULL,
-  `harga` int(11) NOT NULL
+  `harga` int(11) NOT NULL,
+  `status` enum('checkin','checkout') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `pemesanan`
+--
+
+INSERT INTO `pemesanan` (`id_pemesanan`, `nama_pemesan`, `email`, `no_hp`, `nama_tamu`, `id_kamar`, `tgl_cekin`, `tgl_cekout`, `jml_kamar`, `tipe_kamar`, `harga`, `status`) VALUES
+(2, 'dimas', 'dimas@gmail.com', '081234567890', 'dimas', 1, '2022-04-16', '2022-04-17', 1, '', 0, 'checkout'),
+(3, 'desu', 'desu@gmail.com', '081234567890', 'desu', 3, '2022-04-16', '2022-04-17', 1, '', 0, 'checkout');
 
 -- --------------------------------------------------------
 
@@ -93,8 +111,18 @@ CREATE TABLE `pemesanan` (
 
 CREATE TABLE `tipe` (
   `id_tipe` int(11) NOT NULL,
-  `nama_tipe` int(50) NOT NULL
+  `nama_tipe` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tipe`
+--
+
+INSERT INTO `tipe` (`id_tipe`, `nama_tipe`) VALUES
+(1, 'reguler room'),
+(2, 'silver room'),
+(3, 'gold room'),
+(4, 'platinum room');
 
 -- --------------------------------------------------------
 
@@ -109,6 +137,16 @@ CREATE TABLE `tipe_kamar` (
   `gambar_tipekamar` text NOT NULL,
   `harga` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `tipe_kamar`
+--
+
+INSERT INTO `tipe_kamar` (`id_kamar`, `id_tipe`, `jml_kamar`, `gambar_tipekamar`, `harga`) VALUES
+(1, 1, 10, 'reguler room.jpg', 350000),
+(2, 2, 10, 'silver room.jpg', 500000),
+(3, 3, 10, 'gold room.jpg', 700000),
+(4, 4, 10, 'platinum room.jpg', 800000);
 
 --
 -- Indexes for dumped tables
@@ -173,25 +211,25 @@ ALTER TABLE `fasilitas_kamar`
 -- AUTO_INCREMENT untuk tabel `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT untuk tabel `tipe`
 --
 ALTER TABLE `tipe`
-  MODIFY `id_tipe` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tipe` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `tipe_kamar`
 --
 ALTER TABLE `tipe_kamar`
-  MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)

@@ -24,7 +24,7 @@
   <div class="card-body">
   <div class="row">
   <div class="col-sm-12">
-  <form action="<?= base_url('Tamu/KirimData')?>" method="POST">
+  <form action="<?= base_url('Tamu/KirimData') ?>" method="POST">
   <div class="form-row">
     <div class="form-group col-md-12">
       <label for="inputEmail4">Nama Pemesan :</label>
@@ -34,10 +34,10 @@
       <label for="inputAddress">Tipe Kamar :</label>
       <select class="form-control" name="id_kamar">
         <option selected>Pilih Tipe :</option>
-        <option value="6">Regular Room</option>
-        <option value="7">Silver Room</option>
-        <option value="8">Gold Room</option>
-        <option value="9">Platinum Room</option>
+        <option value="1">Regular Room</option>
+        <option value="2">Silver Room</option>
+        <option value="3">Gold Room</option>
+        <option value="4">Platinum Room</option>
       </select>
     </div>
   </div>
@@ -69,7 +69,7 @@
     </div>
     </div>
     </div>
-   <a type="submit" class="btn btn-primary mt-3">Pesan</a>
+   <button type="submit" class="btn btn-primary mt-3">Pesan</button>
   </form>
 
   

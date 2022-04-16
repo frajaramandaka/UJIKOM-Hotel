@@ -10,10 +10,13 @@ class Tamu extends CI_Controller {
     {
         $this->load->view('Tamu/CaraPesan');
     }
-    public function History()
+    public function DataPesanan()
     {
-        $data['datapesanan']=$this->db->get('pemesanan')->result();
-        $this->load->view('Tamu/History',$data);
+        $this->db->select('*');
+        $this->db->from('pemesanan');
+        $this->db->join('tipe_kamar', 'tipe_kamar.id_kamar = pemesanan.id_kamar');
+        $data['datapesanan']=$this->db->get('')->result();
+        $this->load->view('Tamu/DataPesanan',$data);
     }
     public function Kamar()
     {
@@ -33,13 +36,18 @@ class Tamu extends CI_Controller {
     }
     public function Riwayat()
     {
-        $this->load->view('Tamu/Riwayat');
+        $this->db->select('*');
+        $this->db->from('pemesanan');
+        $this->db->join('tipe_kamar', 'tipe_kamar.id_kamar = pemesanan.id_kamar');
+        $this->db->where('status', 'checkout');
+        $data['datariwayat']=$this->db->get('')->result();
+        // var_dump($data['datapesanan']);die;
+        $this->load->view('Tamu/Riwayat', $data);
     }
 
     public function KirimData()
     {
         $query = $this->db->get('tipe_kamar')->result();
-        // var_dump($query);die;
         $total_harga = $_POST['jml_kamar']*$query[0]->harga;
         $data = array(
             'nama_pemesan' => $_POST['nama_pemesan'],
@@ -52,6 +60,18 @@ class Tamu extends CI_Controller {
             'no_hp' => $_POST['no_hp']
         );
         $this->db->insert('pemesanan',$data);
-        redirect('Tamu/History');
+        redirect('Tamu/DataPesanan');
+    }
+
+    public function UbahStatus()
+    {
+        $status =$_GET['status'];
+        $id =$_GET['id'];
+        $data = array(
+            'status' => $status
+        );
+        $this->db->where('id_pemesanan', $id);
+        $this->db->update('pemesanan', $data);
+        redirect('Tamu/Riwayat', ['status' => $status]);
     }
 }
