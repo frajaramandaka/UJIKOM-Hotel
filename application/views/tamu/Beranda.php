@@ -17,9 +17,7 @@
     <!-- Header -->
     <?php $this->load->view('tamu/_partials/Header.php')?>
     <?php if (empty($_SESSION['user']->level)):?>
-        <div class="jumbotron jumbotron-fluid mb-5">
-    
-        </div>
+        <div class="jumbotron jumbotron-fluid mb-5"></div>
         <main>
         <h3 class="text-center p-3 text-light" style="background-color: DarkTurquoise; border-radius: 20px; margin: 0px 15% 30px 15%;">Restaurant Dengan Cita Rasa Italy</h3>
         <img src="<?= base_url('assets/image/gambar restaurant.jpg'); ?>" class="float-left" width="910" height="512">
