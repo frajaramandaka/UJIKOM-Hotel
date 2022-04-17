@@ -11,10 +11,10 @@
           <a class="nav-link active" aria-current="page" href="<?= base_url('Resepsionis/DataPesanan'); ?>">Data Pesanan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="<?= base_url('Resepsionis/Kamar'); ?>">Riwayat Pesanan</a>
+          <a class="nav-link active" href="<?= base_url('Resepsionis/Riwayat'); ?>">Riwayat Pesanan</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="<?= base_url('Resepsionis/PesanKamar'); ?>" data-bs-toggle="modal" data-bs-target="#exampleModal">Data   Fasilitas</a>
+          <a class="nav-link active" href="<?= base_url('Resepsionis/DataFasilitas'); ?>">Data   Fasilitas</a>
         </li>
       </ul>
     </div>

@@ -20,11 +20,11 @@
 
   <div class="card text-center">
   <div class="card-header">
-    <ul class="nav nav-pills card-header-pills">
-      <li class="nav-item">
+    <ul class="nav nav-pills card-header-pills d-flex justify-content-center">
+      <li class="nav-item" style="margin: 0px 25px 0px 0px">
         <a class="nav-link active" href="<?= base_url('Tamu/DataPesanan');?>">Data Pesanan</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" style="margin: 0px 0px 0px 25px">
         <a class="nav-link" href="<?= base_url('Tamu/Riwayat');?>">Riwayat Pesanan</a>
       </li>
     </ul>

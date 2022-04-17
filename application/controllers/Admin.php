@@ -6,4 +6,16 @@ class Admin extends CI_Controller {
 	{
 		$this->load->view('Admin/Beranda');
 	}
+	public function DataKamar()
+	{
+		$this->load->view('Admin/DataKamar');
+	}
+	public function FasilitasKamar()
+	{
+		$this->load->view('Admin/FasilitasKamar');
+	}
+	public function FasilitasHotel()
+	{
+		$this->load->view('Admin/FasilitasHotel');
+	}
 }

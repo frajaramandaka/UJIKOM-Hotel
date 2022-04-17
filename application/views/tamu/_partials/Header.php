@@ -1,7 +1,7 @@
 <?php if (empty($_SESSION['user']->level)) : ?>
 
 <header>
-   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: MediumAquaMarine;">
+   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: DarkTurquoise;">
   <div class="container-fluid">
     <a class="navbar-brand" href="<?= base_url('Tamu/Beranda'); ?>">Hotel Hebat</a>
     <ul class="navbar-nav">

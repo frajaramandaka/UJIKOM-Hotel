@@ -20,11 +20,11 @@
 
   <div class="card text-center">
   <div class="card-header">
-    <ul class="nav nav-pills card-header-pills">
-      <li class="nav-item">
+    <ul class="nav nav-pills card-header-pills d-flex justify-content-center">
+      <li class="nav-item"  style="margin: 0px 25px 0px 0px">
         <a class="nav-link" href="<?= base_url('Tamu/DataPesanan');?>">Data Pesanan</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" style="margin: 0px 0px 0px 25px">
         <a class="nav-link active" href="<?= base_url('Tamu/Riwayat');?>">Riwayat Pesanan</a>
       </li>
     </ul>
@@ -70,10 +70,10 @@
               <tr>
               <td width="50"><img class="card-img-top" src="<?= base_url('assets/image/').$data->gambar_tipekamar?>" alt="Card image cap" ></td>
               <td><?= $data->nama_pemesan?></td>
-              <td><?= $data->tipe_kamar?></td>
+              <td><?= $data->nama_kamar?></td>
               <td><?= $data->tgl_cekin?></td>
               <td><?= $data->tgl_cekout?></td>
-              <td><?= $data->jml_kamar?></td>
+              <td><?= $data->jmlh_kamar?></td>
               <td><?= $data->nama_tamu?></td>
               <td><?= $data->email?></td>
               <td><?= $data->no_hp?></td>

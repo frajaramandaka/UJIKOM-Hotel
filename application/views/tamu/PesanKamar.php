@@ -52,7 +52,7 @@
   <div class="form-row">
     <div class="form-group col-md-12">
       <label for="inputCity">Jumlah Kamar :</label>
-      <input type="number" name="jml_kamar" class="form-control" id="">
+      <input type="number" name="jmlh_kamar" class="form-control" id="">
     </div>
     <div class="form-group col-md-12">
       <label for="inputEmail4">Nama Tamu :</label>

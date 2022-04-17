@@ -54,7 +54,7 @@ class Tamu extends CI_Controller {
             'id_kamar' => $_POST['id_kamar'],
             'tgl_cekin' => $_POST['tgl_cekin'],
             'tgl_cekout' => $_POST['tgl_cekout'],
-            'jml_kamar' => $_POST['jml_kamar'],
+            'jmlh_kamar' => $_POST['jmlh_kamar'],
             'nama_tamu' => $_POST['nama_tamu'],
             'email' => $_POST['email'],
             'no_hp' => $_POST['no_hp']
