@@ -21,7 +21,7 @@
     </div>
     <div class="card-body">
     
-    <?php if (empty($datapesanan[0]->level) || $datapesanan[0]->status == 'cekout') :?>
+    <?php if (empty($datapesanan)) :?>
     <h3 class="mt-3 " id="DataPesanan" style="">Maaf belum ada pesanan masuk</h3>
     <?php else :?>
       <table class="table table-bordered table-striped">

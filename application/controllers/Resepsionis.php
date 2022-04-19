@@ -15,6 +15,8 @@ class Resepsionis extends CI_Controller {
         $this->db->select('*');
         $this->db->from('pemesanan');
         $this->db->join('tipe_kamar', 'tipe_kamar.id_kamar = pemesanan.id_kamar');
+        $this->db->where('status', 'checkin');
+
         $data['datapesanan']=$this->db->get('')->result();
         $this->load->view('Resepsionis/DataPesanan',$data);
     }

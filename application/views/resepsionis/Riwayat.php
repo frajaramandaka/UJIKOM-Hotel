@@ -19,8 +19,32 @@
         <h2 class="text-center text-white font-weight-bold">asdasd</h2>
       </div>
     </div>
+
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        <form class="form-inline my-2 my-lg-0 d-flex justify-content-end mr-5">
+        
+        <div class="form-group col-md-8">
+          <label for="inputAddress">Mencari nama :</label>
+          <div class="d-flex justify-content-start" style="margin-right:20px;">
+          <input class="form-control mr-sm-2" style="margin: 0px px 0px 0px" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-primary" style="margin: 0px 0px 0px 5px" type="submit">Search</button>
+          </div>
+        </div>
+        
+        <div class="form-group col-md-4">
+          <label for="inputAddress">Sortir data :</label>
+          <select class="form-control" name="id_kamar">
+            <option selected>Sortir menurut</option>
+            <option value="1">Tanggal Check-in</option>
+            <option value="2">Tanggal Check-out</option>
+            <option value="3">Tipe Kamar</option>
+          </select>
+        </div>
+
+        </form>
+      </div>
     <div class="card-body">
-    
     <?php if (empty($datariwayat)) :?>
     <h3 class="mt-3 " id="DataPesanan" style="">Maaf belum ada riwayat dilakukan</h3>
     <?php else :?>
@@ -59,6 +83,7 @@
     <?php endif ;?>  
 
   </div>
+</div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,7 +49,16 @@
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
                   <a href="<?= base_url('Auth/Login');?>" type="submit" class="btn btn-primary">Login</a>
               </div>
+
     <?php else :?>
+
+      <?php if (empty($datapesanan)) :?>
+        <h3 class="mt-3" id="DataPesanan" style="">Maaf anda belum melakukan pemesanan :( </h3>
+    <p><i data-feather="arrow-down-circle"></i></p>
+    <a href="<?= base_url('Tamu/PesanKamar'); ?>" class="btn btn-primary mt-3" style="margin: 0px 35% 0px 35%">Lakukan pemesanan</a>
+
+        <?php else :?>
+
         <?php foreach($datapesanan as $data) :?>
             <?php if($data->status == 'checkin'):?>
                 <div class="card" style="width: 18rem;">
@@ -62,7 +70,9 @@
                     </div>
                 </div>
             <?php endif;?>
+            
         <?php endforeach;?>
+      <?php endif ;?>
     <?php endif ;?>  
 
   </div>
