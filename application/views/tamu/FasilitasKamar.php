@@ -12,7 +12,7 @@
 
     <title>Hotel Hebat/Fasilitas Kamar</title>
 </head>
-<body>
+<body style="background-color: GhostWhite">
     <!-- Header -->
   <?php $this->load->view('tamu/_partials/Header.php')?>
   <div class="jumbotron jumbotron-fluid mb-5"></div>

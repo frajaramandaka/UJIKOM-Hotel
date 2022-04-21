@@ -13,7 +13,7 @@
 
     <title>Hotel Hebat</title>
   </head>
-  <body>
+  <body style="background-color: GhostWhite">
     <!-- Header -->
     <?php $this->load->view('tamu/_partials/Header.php')?>
     <?php if (empty($_SESSION['user']->level)):?>

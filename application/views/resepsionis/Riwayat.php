@@ -24,11 +24,19 @@
       <div class="card-header d-flex justify-content-between">
         <form class="form-inline my-2 my-lg-0 d-flex justify-content-end mr-5">
         
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-4">
           <label for="inputAddress">Mencari nama :</label>
           <div class="d-flex justify-content-start" style="margin-right:20px;">
-          <input class="form-control mr-sm-2" style="margin: 0px px 0px 0px" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-primary" style="margin: 0px 0px 0px 5px" type="submit">Search</button>
+          <input class="form-control mr-sm-2" style="margin: 0px px 0px 0px" type="search" placeholder="Search" aria-label="Search"  onkeyup="myTableName()" id="Myname">
+          <button class="btn btn-outline-primary" style="margin: 0px 0px 0px 5px" type="button">Search</button>
+          </div>
+        </div>
+        
+        <div class="form-group col-md-4">
+          <label for="inputAddress">Mencari KodeReff :</label>
+          <div class="d-flex justify-content-start" style="margin-right:20px;">
+          <input class="form-control mr-sm-2" style="margin: 0px px 0px 0px" type="search" placeholder="Search" aria-label="Search"  onkeyup="myKodReff()" id="Myreff">
+          <button class="btn btn-outline-primary" style="margin: 0px 0px 0px 5px" type="button">Search</button>
           </div>
         </div>
         
@@ -48,7 +56,7 @@
     <?php if (empty($datariwayat)) :?>
     <h3 class="mt-3 " id="DataPesanan" style="">Maaf belum ada riwayat dilakukan</h3>
     <?php else :?>
-      <table class="table table-bordered table-striped">
+      <table class="table table-bordered table-striped" id="Mytable">
         <thread>
           <tr>
             <th style=""></th>
@@ -60,6 +68,7 @@
             <th style="width">Nama Tamu</th>
             <th style="width">Email</th>
             <th style="width">Nomor Whatsapp</th>
+            <th style="width">Kode Reff</th>
             <th style=""></th>
           </tr>
           <tbody>
@@ -74,6 +83,7 @@
               <td><?= $data->nama_tamu?></td>
               <td><?= $data->email?></td>
               <td><?= $data->no_hp?></td>
+              <td><?= $data->KodReff?></td>
               <td><button type="submit" class="btn btn-primary">Cetak PDF</button></td>
             </tr>
             <?php endforeach;?>
@@ -85,7 +95,7 @@
   </div>
 </div>
 
-
+  <?php $this->load->view('resepsionis/_partials/js.php')?>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
      <title>Hotel Hebat/History</title>
 </head>
-<body>
+<body style="background-color: GhostWhite">
   <!-- Header -->
   <?php $this->load->view('tamu/_partials/Header.php')?>
   <div class="jumbotron jumbotron-fluid mb-5"></div>
@@ -63,6 +63,7 @@
             <th style="width">Nama Tamu</th>
             <th style="width">Email</th>
             <th style="width">Nomor Whatsapp</th>
+            <th style="width">Kode Reff</th>
             <th style=""></th>
           </tr>
           <tbody>
@@ -77,6 +78,7 @@
               <td><?= $data->nama_tamu?></td>
               <td><?= $data->email?></td>
               <td><?= $data->no_hp?></td>
+              <td><?= $data->KodReff?></td>
               <td><button type="submit" class="btn btn-primary">Cetak PDF</button></td>
             </tr>
             <?php endforeach;?>

@@ -57,7 +57,8 @@ class Tamu extends CI_Controller {
             'jmlh_kamar' => $_POST['jmlh_kamar'],
             'nama_tamu' => $_POST['nama_tamu'],
             'email' => $_POST['email'],
-            'no_hp' => $_POST['no_hp']
+            'no_hp' => $_POST['no_hp'],
+            'KodReff' => $_POST['KodReff'].date('ymd').date('Dis')
         );
         $this->db->insert('pemesanan',$data);
         redirect('Tamu/DataPesanan');

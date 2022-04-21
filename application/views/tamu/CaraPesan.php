@@ -13,7 +13,7 @@
 
     <title>Hotel Hebat/Cara Pesan</title>
   </head>
-  <body>
+  <body style="background-color: GhostWhite">
   
     <!-- Header -->
     <?php $this->load->view('tamu/_partials/Header.php')?>

@@ -12,7 +12,7 @@
 
     <title>Hotel Hebat/Pesan Kamar</title>
 </head>
-<body>
+<body style="background-color: GhostWhite">
   <!-- Header -->
   <?php $this->load->view('tamu/_partials/Header.php')?>
   <div class="jumbotron jumbotron-fluid mb-5">
@@ -20,7 +20,7 @@
 
   <div class="container-lg">
     <div class="card mt-3">
-  <h5 class="card-header d-flex justify-content-center p-3">Pesan Kamar</h5>
+  <h4 class="card-header d-flex justify-content-center"  style="background-color: DarkTurquoise;">Pesan Kamar</h4>
   <div class="card-body">
   <div class="row">
   <div class="col-sm-12">
@@ -69,8 +69,9 @@
     </div>
     </div>
     </div>
-   <button type="submit" class="btn btn-primary mt-3">Pesan</button>
+   <button type="submit" class="btn btn-primary mt-3 mb-2">Pesan</button>
   </form>
+  <div class="card-footer mt-3 p-3 rounded" style="background-color: DarkTurquoise; margin: 0px -17px -20px -17px"></div>
 
   
 

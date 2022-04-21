@@ -10,7 +10,7 @@
 
     <title>Hotel Hebat/Pesan Kamar</title>
 </head>
-<body>
+<body style="background-color: GhostWhite">
 
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: DarkTurquoise;">
