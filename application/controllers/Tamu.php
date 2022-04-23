@@ -26,6 +26,14 @@ class Tamu extends CI_Controller {
     {
         $this->load->view('Tamu/PesanKamar');
     }
+    public function Cetak()
+    {
+        $this->db->select('*');
+        $this->db->from('pemesanan');
+        $this->db->join('tipe_kamar', 'tipe_kamar.id_kamar = pemesanan.id_kamar');
+        $data['datapesanan']=$this->db->get('')->result();
+        $this->load->view('Tamu/Cetak');
+    }
     public function FasilitasKamar()
     {
         $this->load->view('Tamu/FasilitasKamar');
@@ -41,8 +49,14 @@ class Tamu extends CI_Controller {
         $this->db->join('tipe_kamar', 'tipe_kamar.id_kamar = pemesanan.id_kamar');
         $this->db->where('status', 'checkout');
         $data['datariwayat']=$this->db->get('')->result();
-        // var_dump($data['datapesanan']);die;
-        $this->load->view('Tamu/Riwayat', $data);
+        // foreach ($data['datariwayat'] as  $value) {
+        //     $this->db->where('id_pemesanan', $value->id_pemesanan);
+        //     $data['harga'] = "Rp " . number_format($value->harga,2,',','.');
+        //     var_dump($data['harga']);die;       
+        //     if (!empty($data['harga'])) {
+        //     }
+        // }
+        return $this->load->view('Tamu/Riwayat', $data);        
     }
 
     public function KirimData()
@@ -58,7 +72,7 @@ class Tamu extends CI_Controller {
             'nama_tamu' => $_POST['nama_tamu'],
             'email' => $_POST['email'],
             'no_hp' => $_POST['no_hp'],
-            'KodReff' => $_POST['KodReff'].date('ymd').date('Dis')
+            'KodReff' => $_POST['KodReff'].date('ymd').date('Dis')  
         );
         $this->db->insert('pemesanan',$data);
         redirect('Tamu/DataPesanan');
@@ -75,4 +89,12 @@ class Tamu extends CI_Controller {
         $this->db->update('pemesanan', $data);
         redirect('Tamu/Riwayat', ['status' => $status]);
     }
+
+    function rupiah($angka){
+	
+        
+     
+    }
+
+    
 }

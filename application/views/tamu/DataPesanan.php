@@ -24,10 +24,10 @@
         <a class="nav-link active" href="<?= base_url('Tamu/DataPesanan');?>">Data Pesanan</a>
       </li>
       <li class="nav-item" style="margin: 0px 25px 0px 25px">
-        <a class="nav-link" href="<?= base_url('Tamu/Riwayat');?>">Riwayat Pesanan</a>
+        <a class="nav-link bg-warning text-light" href="<?= base_url('Tamu/Riwayat');?>">Riwayat Pesanan</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link bg-warning" href="<?= base_url('Tamu/PesanKamar');?>">Pesan Kamar</a>
+      <li class="nav-item" style="margin: 0px 0px 0px 25px">
+        <a class="nav-link bg-warning text-light" href="<?= base_url('Tamu/PesanKamar');?>">Pesan Kamar</a>
       </li>
     </ul>
   </div>
@@ -67,7 +67,7 @@
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="<?= base_url('assets/image/').$data->gambar_tipekamar?>" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title"></h5>
+                        <h5 class="card-title"><?= base_url($data->nama_kamar)?></h5>
                         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="<?= base_url('Tamu/UbahStatus').'?status=checkout&id='.$data->id_pemesanan;?>" class="btn btn-primary">Check-out</a>
                     </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 21 Apr 2022 pada 09.33
+-- Waktu pembuatan: 23 Apr 2022 pada 09.39
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -149,7 +149,10 @@ CREATE TABLE `pemesanan` (
 INSERT INTO `pemesanan` (`id_pemesanan`, `nama_pemesan`, `email`, `no_hp`, `nama_tamu`, `id_kamar`, `tgl_cekin`, `tgl_cekout`, `jmlh_kamar`, `tipe_kamar`, `harga`, `status`, `KodReff`) VALUES
 (8, 'dimas', 'dimas@gmail.com', '081234567890', 'dimas', 1, '2022-04-21', '2022-04-22', 1, '', 0, 'checkout', '220421Thu4740'),
 (9, 'desu', 'desu@gmail.com', '081298563214', 'desu', 2, '2022-04-22', '2022-04-23', 1, '', 0, 'checkout', '220421Thu4847'),
-(10, 'oka', 'oka@gmail.com', '081289654785', 'oka', 2, '2022-04-23', '2022-04-24', 1, '', 0, 'checkout', '220421Thu1524');
+(10, 'oka', 'oka@gmail.com', '081289654785', 'oka', 2, '2022-04-23', '2022-04-24', 1, '', 0, 'checkout', '220421Thu1524'),
+(11, 'Sindi', 'Sindi@gmail.com', '081254126984', 'Sindi', 3, '2022-04-23', '2022-04-24', 1, '', 0, 'checkin', '220423Sat3235'),
+(12, 'Rani', 'Rani@gmail.com', '081245879658', 'Rani', 4, '2022-04-25', '2022-04-26', 1, '', 0, 'checkout', '220423Sat1217'),
+(13, 'Ginda', 'Ginda@gmail.com', '081265893254', 'Ginda', 4, '2022-04-26', '2022-04-27', 1, '', 0, 'checkin', '220423Sat1017');
 
 -- --------------------------------------------------------
 
@@ -162,7 +165,7 @@ CREATE TABLE `tipe_kamar` (
   `nama_kamar` varchar(50) NOT NULL,
   `jml_kamar` int(11) NOT NULL,
   `gambar_tipekamar` text NOT NULL,
-  `harga` int(11) NOT NULL
+  `harga` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -170,11 +173,11 @@ CREATE TABLE `tipe_kamar` (
 --
 
 INSERT INTO `tipe_kamar` (`id_kamar`, `nama_kamar`, `jml_kamar`, `gambar_tipekamar`, `harga`) VALUES
-(1, 'reguler room', 10, 'reguler room.jpg', 350000),
-(2, 'silver room', 10, 'silver room.jpg', 500000),
-(3, 'gold room', 10, 'gold room.jpg', 700000),
-(4, 'platinum room', 10, 'platinum room.jpg', 800000),
-(5, 'deluxe room', 10, 'deluxe room.jpg', 950000);
+(1, 'reguler room', 10, 'reguler room.jpg', '350000'),
+(2, 'silver room', 10, 'silver room.jpg', 'Rp.500.000'),
+(3, 'gold room', 10, 'gold room.jpg', 'Rp.700.000'),
+(4, 'platinum room', 10, 'platinum room.jpg', 'Rp.800.000'),
+(5, 'deluxe room', 10, 'deluxe room.jpg', 'Rp.950.000');
 
 --
 -- Indexes for dumped tables
@@ -239,7 +242,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT untuk tabel `tipe_kamar`

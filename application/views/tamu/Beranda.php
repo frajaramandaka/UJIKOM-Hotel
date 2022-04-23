@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-md-4 mt-4">
                     <div class="card" >
-                    <img src="<?= base_url('assets/image/deluxe room.jpg'); ?>" class="card-img-top" width="412" height="311">
+                    <img src="<?= base_url('assets/image/platinum room.jpg'); ?>" class="card-img-top" width="412" height="311">
                     <div class="card-body">
                         <h3>Deluxe Room</h3>
                         <p class="card-text"> 2 Kasur Tidur Besar Dengan Balkon Dan Ruang Kerja <br> Rp.800.000,-</p>
@@ -104,11 +104,10 @@
                     <img src="<?= base_url('assets/image/silver room.jpg'); ?>" class="card-img-top" width="412" height="311">
                     <div class="card-body">
                         <h3>Silver Room</h3>
-                        <p class="card-text"> 2 Kasur Tidur Terpisah <br> Rp.500.000,-</p>
-                        
+                        <p class="card-text"> 2 Kasur Tidur Terpisah <br> Rp.500.000,-</p>        
                     </div>
                 </div>
-                
+
                 </div>
                 <div class="col-md-4">
                     <div class="card" >
@@ -122,13 +121,20 @@
                 </div>
                 <div class="col-md-4 mt-4">
                     <div class="card" >
-                    <img src="<?= base_url('assets/image/deluxe room.jpg'); ?>" class="card-img-top" width="412" height="311">
+                    <img src="<?= base_url('assets/image/platinum room.jpg'); ?>" class="card-img-top" width="412" height="311">
+                    <div class="card-body">
+                        <h3>Platinum Room</h3>
+                        <p class="card-text"> 2 Kasur Tidur Besar Dengan Balkon Dan Ruang Kerja <br> Rp.800.000,-</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mt-4">
+                    <div class="card" >
+                    <img src="<?= base_url('assets/image/platinum room.jpg'); ?>" class="card-img-top" width="412" height="311">
                     <div class="card-body">
                         <h3>Deluxe Room</h3>
                         <p class="card-text"> 2 Kasur Tidur Besar Dengan Balkon Dan Ruang Kerja <br> Rp.800.000,-</p>
                     </div>
                 </div>
-
                 </div>
             </div>
             
