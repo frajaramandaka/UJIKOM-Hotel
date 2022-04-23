@@ -44,7 +44,7 @@
           <label for="inputAddress">Sortir data :</label>
           <select class="form-control" name="id_kamar">
             <option selected>Sortir menurut</option>
-            <option value="1">Tanggal Check-in</option>
+            <option value="1" onkeyup="myCheckin()" id="Mycheckin">Tanggal Check-in</option>
             <option value="2">Tanggal Check-out</option>
             <option value="3">Tipe Kamar</option>
           </select>

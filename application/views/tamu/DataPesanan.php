@@ -18,13 +18,16 @@
   <div class="jumbotron jumbotron-fluid mb-5"></div>
 
   <div class="card text-center">
-  <div class="card-header">
+  <div class="card-header" style="background-color: DarkTurquoise">
     <ul class="nav nav-pills card-header-pills d-flex justify-content-center">
       <li class="nav-item" style="margin: 0px 25px 0px 0px">
         <a class="nav-link active" href="<?= base_url('Tamu/DataPesanan');?>">Data Pesanan</a>
       </li>
-      <li class="nav-item" style="margin: 0px 0px 0px 25px">
+      <li class="nav-item" style="margin: 0px 25px 0px 25px">
         <a class="nav-link" href="<?= base_url('Tamu/Riwayat');?>">Riwayat Pesanan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link bg-warning" href="<?= base_url('Tamu/PesanKamar');?>">Pesan Kamar</a>
       </li>
     </ul>
   </div>
