@@ -13,16 +13,14 @@
     <title>Cetak PDF</title>
 </head>
 <body>
-    <!-- Header -->
-    <?php $this->load->view('tamu/_partials/Header.php')?>
     <?php foreach($datariwayat as $data):?>
     <div class="container">
-    <div class="card">
-        <div class="card-header" style="background-color: Gold">Hotel Hebat</div>
+    <div class="card" style="width: 34rem;">
+        <div class="card-header text-center" style="background-color: Gold">Hotel Hebat</div>
         <div class="card-body">
-            <p class="card-text">Anda telah berhasil melakukan pemesanan</p>
+            <p class="card-text text-center">Anda telah berhasil melakukan pemesanan</p>
             <hr>
-            <img class="card-img-top" src="<?= base_url('assets/image/').$data->gambar_tipekamar?>" alt="Card image cap">
+            <img class="card-img-top rounded mx-auto d-block" style="width: 500px;" src="<?= base_url('assets/image/').$data->gambar_tipekamar?>" alt="Card image cap">
             <hr>
             <p class="d-flex justify-content-start">Kode Reff</p>
             <p class="d-flex justify-content-start" style="margin-top: -15px; color: Red"><?= $data->KodReff?></p>
@@ -55,6 +53,9 @@
     </div>
     </div>
     <?php endforeach; ?>
+    <script>
+         window.print();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     </body>
 </html>

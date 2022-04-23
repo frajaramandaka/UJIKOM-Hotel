@@ -130,7 +130,7 @@
 
                         <div class="modal-footer">
                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                          <a href="<?= base_url('Tamu/Cetak')?>" type="button" class="btn btn-primary" target="_blank">Cetak</a>
+                          <a href="<?= base_url('Tamu/Cetak').'?id='.$data->id_pemesanan?>" type="button" class="btn btn-primary" target="_blank">Cetak</a>
                         </div>
                       </div>
                     </div>

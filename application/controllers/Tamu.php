@@ -28,11 +28,13 @@ class Tamu extends CI_Controller {
     }
     public function Cetak()
     {
+        $id=$_GET['id'];
         $this->db->select('*');
         $this->db->from('pemesanan');
         $this->db->join('tipe_kamar', 'tipe_kamar.id_kamar = pemesanan.id_kamar');
-        $data['datapesanan']=$this->db->get('')->result();
-        $this->load->view('Tamu/Cetak');
+        $this->db->where('id_pemesanan', $id);
+        $data['datariwayat']=$this->db->get('')->result();
+        $this->load->view('Tamu/Cetak', $data);
     }
     public function FasilitasKamar()
     {
