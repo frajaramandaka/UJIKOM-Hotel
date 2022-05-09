@@ -85,7 +85,7 @@
         <img src="<?= base_url('assets/image/kolam renang.png'); ?>" class="float-left" width="910" height="512">
         <h3 class="text-center p-3 text-light" style="background-color: DarkTurquoise; border-radius: 20px; margin: 20px 15% 30px 15%;">Area Gym Untuk Melatih Kebugaran</h3>
         <img src="<?= base_url('assets/image/gym.jpg'); ?>" class="float-left" width="910" height="512">
-        <h3 class="text-center p-3 text-light" style="background-color: DarkTurquoise; border-radius: 20px; margin: 20px 15% 30px 15%;">Tipe Kamara</h3>
+        <h3 class="text-center p-3 text-light" style="background-color: DarkTurquoise; border-radius: 20px; margin: 20px 15% 30px 15%;">Tipe Kamar</h3>
         <div class="container" style="margin-bottom: 400px;">
 
             <div class="row align-items-center">
@@ -127,14 +127,17 @@
                         <p class="card-text"> 2 Kasur Tidur Besar Dengan Balkon Dan Ruang Kerja <br> Rp.800.000,-</p>
                     </div>
                 </div>
+
+                </div>
                 <div class="col-md-4 mt-4">
                     <div class="card" >
-                    <img src="<?= base_url('assets/image/platinum room.jpg'); ?>" class="card-img-top" width="412" height="311">
+                    <img src="<?= base_url('assets/image/deluxe room.jpg'); ?>" class="card-img-top" width="412" height="311">
                     <div class="card-body">
                         <h3>Deluxe Room</h3>
                         <p class="card-text"> 2 Kasur Tidur Besar Dengan Balkon Dan Ruang Kerja <br> Rp.800.000,-</p>
                     </div>
                 </div>
+
                 </div>
             </div>
             

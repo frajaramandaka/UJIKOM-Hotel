@@ -18,58 +18,41 @@
   <?php $this->load->view('tamu/_partials/Header.php')?>
   <div class="jumbotron jumbotron-fluid mb-5"></div>
     
-    <div class="container-fluid">
-        <div class="card">
-            <div class="card-body">
-            <form>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-    </div>
-    <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-    </div>
+  <div class="card" style="width: 18rem; margin-left: 20px">
+    <img class="card-img-top" src="<?= base_url('assets/image/reguler room.jpg')?>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Reguler Room</h5>
+          <p class="card-text">memiliki 1 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.</p>
+      </div>
   </div>
-  <div class="form-group">
-    <label for="inputAddress">Address</label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+  <div class="card" style="width: 18rem; margin: 10px 0px 0px 20px">
+    <img class="card-img-top" src="<?= base_url('assets/image/silver room.jpg')?>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Silver Room</h5>
+          <p class="card-text">memiliki 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.</p>
+      </div>
   </div>
-  <div class="form-group">
-    <label for="inputAddress2">Address 2</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+  <div class="card" style="width: 18rem; margin: 10px 0px 20px 20px">
+    <img class="card-img-top" src="<?= base_url('assets/image/gold room.jpg')?>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Gold Room</h5>
+          <p class="card-text">memiliki 1 buah kasur berukuran 2 orang dengan televisi berukuran 32 inci, serta memiliki 2 buah sofa dan meja untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan bathup.</p>
+      </div>
   </div>
-  <div class="form-row">
-    <div class="form-group col-md-6">
-      <label for="inputCity">City</label>
-      <input type="text" class="form-control" id="inputCity">
-    </div>
-    <div class="form-group col-md-4">
-      <label for="inputState">State</label>
-      <select id="inputState" class="form-control">
-        <option selected>Choose...</option>
-        <option>...</option>
-      </select>
-    </div>
-    <div class="form-group col-md-2">
-      <label for="inputZip">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-    </div>
+  <div class="card" style="width: 18rem; margin: 10px 0px 20px 20px">
+    <img class="card-img-top" src="<?= base_url('assets/image/platinum room.jpg')?>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Platinum Room</h5>
+          <p class="card-text">memiliki 1 buah kasur berukuran 2 orang dan 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup</p>
+      </div>
   </div>
-  <div class="form-group">
-    <div class="form-check">
-      <input class="form-check-input" type="checkbox" id="gridCheck">
-      <label class="form-check-label" for="gridCheck">
-        Check me out
-      </label>
-    </div>
+  <div class="card" style="width: 18rem; margin: 10px 0px 20px 20px">
+    <img class="card-img-top" src="<?= base_url('assets/image/reguler room.jpg')?>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">Deluxe Room</h5>
+          <p class="card-text">memiliki 2 buah kasur berukuran 2 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup</p>
+      </div>
   </div>
-  <button type="submit" class="btn btn-primary">Sign in</button>
-</form>
-            </div>
-        </div>
-    </div>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

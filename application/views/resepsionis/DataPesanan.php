@@ -15,8 +15,6 @@
     <?php $this->load->view('Resepsionis/_partials/Header.php')?>
     <div class="jumbotron jumbotron-fluid mb-5">
       <div style="padding:300px; font-weight: normal;">
-        <h1 class="text-center text-white font-weight-bold">Selamat Datang</h1>
-        <h2 class="text-center text-white font-weight-bold">asdasd</h2>
       </div>
     </div>
     <div class="card-body">

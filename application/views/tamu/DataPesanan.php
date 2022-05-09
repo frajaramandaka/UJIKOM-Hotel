@@ -27,7 +27,22 @@
         <a class="nav-link bg-warning text-light" href="<?= base_url('Tamu/Riwayat');?>">Riwayat Pesanan</a>
       </li>
       <li class="nav-item" style="margin: 0px 0px 0px 25px">
-        <a class="nav-link bg-warning text-light" href="<?= base_url('Tamu/PesanKamar');?>">Pesan Kamar</a>
+        <a class="nav-link bg-warning text-light" data-bs-toggle="modal" data-bs-target="#exampleModal" href="<?= base_url('Tamu/PesanKamar');?>">Pesan Kamar</a>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Pesan Kamar Gagal</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      maaf anda harus login terlebih dahulu
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Tutup</button>
+                      <a href="<?= base_url('Auth/Login');?>" type="submit" class="btn btn-primary">Login</a>
+                  </div>
       </li>
     </ul>
   </div>
@@ -64,7 +79,7 @@
 
         <?php foreach($datapesanan as $data) :?>
             <?php if($data->status == 'checkin'):?>
-                <div class="card" style="width: 18rem;">
+                <div class="card mt-4" style="width: 18rem;">
                     <img class="card-img-top" src="<?= base_url('assets/image/').$data->gambar_tipekamar?>" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title"><?= base_url($data->nama_kamar)?></h5>
