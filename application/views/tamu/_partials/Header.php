@@ -6,7 +6,7 @@
     <a class="navbar-brand" href="<?= base_url('Tamu/Beranda'); ?>">Hotel Hebat</a>
     <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/CaraPesan'); ?>">Cara Pesan</a>
+          <a class="nav-link" aria-current="page" href="<?= base_url('Tamu/CaraPesan'); ?>">Cara Pesan</a>
         </li>
     </ul>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
     <div class="d-flex justify-content-end collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="<?= base_url('Tamu/DataPesanan'); ?>">Pesanan Saya</a>
+          <a class="nav-link" aria-current="page" href="<?= base_url('Tamu/DataPesanan'); ?>">Pesanan Saya</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('Tamu/Kamar'); ?>">Kamar</a>
@@ -28,6 +28,7 @@
             <li><a class="dropdown-item" href="<?= base_url('Tamu/FasilitasKamar'); ?>">Fasilitas Kamar</a></li>
             <li><a class="dropdown-item" href="<?= base_url('Tamu/FasilitasHotel'); ?>">Fasilitas Hotel</a></li>
           </ul>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="<?= base_url('Tamu/PesanKamar'); ?>" data-bs-toggle="modal" data-bs-target="#exampleModal">Pesan Kamar</a>
         </li>
@@ -94,7 +95,7 @@
           <a class="nav-link active" href="<?= base_url('Tamu/PesanKamar'); ?>">Pesan Kamar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="<?= base_url('auth/Logout'); ?>">Logout</a>
+          <a class="nav-link active" href="<?= base_url('Auth/Logout'); ?>">Logout</a>
         </li>
         </li>
       </ul>
@@ -105,4 +106,3 @@
     </header>
 
     <?php endif ;?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
