@@ -5,7 +5,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- CSS -->
-      <link rel="stylesheet" href="<?= base_url('assets/css/style.css');?>">
+      <link rel="stylesheet" href="<?= base_url('assets/css/styles.css');?>">
       <!-- Bootstrap CSS -->
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
       <title>Hotel Hebat/Pesan Kamar</title>
@@ -16,7 +16,7 @@
       <div class="jumbotron jumbotron-fluid mb-5">
       </div>
       <div class="container-lg">
-      <div class="card mt-3">
+      <div class="card mt-3" style="margin-bottom: 60px;">
       <h4 class="card-header d-flex justify-content-center"  style="background-color: Gold;">Pesan Kamar</h4>
       <div class="card-body">
       <div class="row">
@@ -71,7 +71,7 @@
       </div>
       </div>
       </div>
-      <div class="card-footer mt-3 p-3 rounded" style="background-color: Gold; margin: 0px -17px -20px -17px; margin-bottom: 335px;"></div>
+      <div class="card-footer mt-3 p-3 rounded" style="background-color: Gold; margin-bottom: 335px;"></div>
       <!-- Footer-->
       <?php $this->load->view('tamu/_partials/Footer.php')?>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

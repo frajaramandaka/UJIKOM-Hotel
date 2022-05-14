@@ -20,7 +20,9 @@ class Tamu extends CI_Controller {
     }
     public function Kamar()
     {
-        $this->load->view('Tamu/Kamar');
+        $data['datakamar'] = $this->db->get('tipe_kamar')->result();
+        $data['datafasilitas'] = $this->db->get('fasilitas_kamar')->result();
+        $this->load->view('Tamu/Kamar', $data);
     }
     public function PesanKamar()
     {
