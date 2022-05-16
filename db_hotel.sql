@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Bulan Mei 2022 pada 15.25
+-- Waktu pembuatan: 16 Bulan Mei 2022 pada 15.50
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -70,7 +70,7 @@ CREATE TABLE `fasilitas_hotel` (
 --
 
 INSERT INTO `fasilitas_hotel` (`id_fashotel`, `nama_fashotel`, `ket_fashotel`, `gambar_fashotel`) VALUES
-(3, '', 'Restaurant dengan metode prasmanan', 'gambar restaurant.jpg'),
+(3, 'Restaurant', 'Restaurant dengan metode prasmanan', 'gambar restaurant.jpg'),
 (4, 'Gym', 'memiliki alat olahraga  yakni trademil, pull up bar, barbell, dumbell', 'gym.jpg'),
 (5, 'Kolam Renang', 'kolam renang dengan kedalaman 50cm, 1 meter, 2 meter', 'kolam renang.png'),
 (6, 'SPA', 'memiliki therapist profesional', 'spa.jpg'),
@@ -204,7 +204,7 @@ INSERT INTO `tipe_kamar` (`id_kamar`, `nama_kamar`, `jml_kamar`, `gambar_tipekam
 (1, 'Reguler room', 20, 'reguler room.jpg', 'Rp.350.000', 'memiliki 1 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
 (2, 'Silver Room', 20, 'silver room.jpg', 'Rp.500.000', 'memiliki 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
 (3, 'Goldroom', 20, 'gold room.jpg', 'Rp.700.000', 'memiliki 1 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
-(4, '', 0, '', '', ''),
+(4, 'Platinum Room', 20, 'platinum room.jpg', 'Rp.850.000', 'memiliki 1 buah kasur berukuran 2 orang dan 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup.'),
 (5, 'Deluxe Room', 20, 'deluxe room.jpg', 'Rp.950.000', 'memiliki 2 buah kasur berukuran 2 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup.');
 
 --

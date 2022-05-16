@@ -83,7 +83,7 @@ class Admin extends CI_Controller {
 	{
 		// var_dump($_POST);die;
 		$data = array(
-			'nama_fashotel' => $_POST['nama_kamar'],
+			'nama_fashotel' => $_POST['nama_fashotel'],
 			'gambar_fashotel'  => $_POST['gambar_fashotel'],
 			'ket_fashotel'  => $_POST['ket_fashotel']
 	);

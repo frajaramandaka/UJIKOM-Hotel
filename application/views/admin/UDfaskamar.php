@@ -20,7 +20,7 @@
         <p class="bg-warning text-center" style="font-size: 20px;">Ubah Data Fasilitas Kamar</p>
     <div class="card-body">
         <form action="<?= base_url('Admin/storeDatafaskamar') ?>" method="POST">
-        <input type="hidden" name="id_kamar" value="<?= $datafaskamar[0]->id_faskamar ?>">
+        <input type="hidden" name="id_faskamar" value="<?= $datafaskamar[0]->id_faskamar ?>">
         <div class="mb-3">
             <label class="form-label" style="margin-right: 51px;">Gambar :</label>
             <input type="text" name="gambar_faskamar" value="<?= $datafaskamar[0]->gambar_faskamar ?>">
