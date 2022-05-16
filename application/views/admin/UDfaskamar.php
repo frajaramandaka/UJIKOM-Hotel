@@ -17,29 +17,21 @@
     <?php $this->load->view('Admin/_partials/Header.php')?>
     <div class="container-fluid mt-3">
     <div class="card">
-        <p class="bg-warning text-center" style="font-size: 20px;">Ubah Data Kamar</p>
+        <p class="bg-warning text-center" style="font-size: 20px;">Ubah Data Fasilitas Kamar</p>
     <div class="card-body">
-        <form action="<?= base_url('Admin/storeData') ?>" method="POST">
-        <input type="hidden" name="id_kamar" value="<?= $datakamar[0]->id_kamar ?>">
+        <form action="<?= base_url('Admin/storeDatafaskamar') ?>" method="POST">
+        <input type="hidden" name="id_kamar" value="<?= $datafaskamar[0]->id_faskamar ?>">
         <div class="mb-3">
             <label class="form-label" style="margin-right: 51px;">Gambar :</label>
-            <input type="text" name="gambar_tipekamar" value="<?= $datakamar[0]->gambar_tipekamar ?>">
+            <input type="text" name="gambar_faskamar" value="<?= $datafaskamar[0]->gambar_faskamar ?>">
         </div>
         <div class="mb-3">
-            <label class="form-label" style="margin-right: 16px;">Nama Kamar :</label>
-           <input type="text" name="nama_kamar" value="<?= $datakamar[0]->nama_kamar ?>">
-        </div>
-        <div class="mb-3">
-            <label class="form-label" style="margin-right: 10px;">Jumlah Kamar :</label>
-           <input type="text" name="jml_kamar" value="<?= $datakamar[0]->jml_kamar ?>">
-        </div>
-        <div class="mb-3">
-            <label class="form-label" style="margin-right: 66px;">Harga :</label>
-           <input type="text" name="harga" value="<?= $datakamar[0]->harga ?>">
+            <label class="form-label" style="margin-right: 16px;">Nama Fasilitas :</label>
+           <input type="text" name="nama_faskamar" value="<?= $datafaskamar[0]->nama_faskamar ?>">
         </div>
         <div class="mb-3">
             <label class="form-label" style="margin-right: 68px;">Detail :</label>
-           <input class="" type="text" name="detail" value="<?= $datakamar[0]->detail ?>">
+           <input class="" type="text" name="kategori" value="<?= $datafaskamar[0]->kategori ?>">
         </div>
         <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Ubah</button>
         </form>

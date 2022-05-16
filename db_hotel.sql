@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Bulan Mei 2022 pada 13.04
+-- Waktu pembuatan: 16 Bulan Mei 2022 pada 15.25
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -62,16 +62,20 @@ CREATE TABLE `fasilitas_hotel` (
   `id_fashotel` int(11) NOT NULL,
   `nama_fashotel` varchar(50) NOT NULL,
   `ket_fashotel` text NOT NULL,
-  `gambar` text NOT NULL
+  `gambar_fashotel` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `fasilitas_hotel`
 --
 
-INSERT INTO `fasilitas_hotel` (`id_fashotel`, `nama_fashotel`, `ket_fashotel`, `gambar`) VALUES
-(1, 'tv', 'ukuran 23 inci', 'gambar.jpg'),
-(2, 'kolam renang', '3 meter', 'gambar.jpg');
+INSERT INTO `fasilitas_hotel` (`id_fashotel`, `nama_fashotel`, `ket_fashotel`, `gambar_fashotel`) VALUES
+(3, '', 'Restaurant dengan metode prasmanan', 'gambar restaurant.jpg'),
+(4, 'Gym', 'memiliki alat olahraga  yakni trademil, pull up bar, barbell, dumbell', 'gym.jpg'),
+(5, 'Kolam Renang', 'kolam renang dengan kedalaman 50cm, 1 meter, 2 meter', 'kolam renang.png'),
+(6, 'SPA', 'memiliki therapist profesional', 'spa.jpg'),
+(7, 'Aula', 'aula berluas panjang 25meter, dan lebar 12meter', 'aula.jpg'),
+(8, 'Parkiran', 'parkiran dengan berluaskan 50 meter', 'parkiran.jpg');
 
 -- --------------------------------------------------------
 
@@ -81,18 +85,22 @@ INSERT INTO `fasilitas_hotel` (`id_fashotel`, `nama_fashotel`, `ket_fashotel`, `
 
 CREATE TABLE `fasilitas_kamar` (
   `id_faskamar` int(11) NOT NULL,
-  `id_kamar` int(11) NOT NULL,
   `nama_faskamar` varchar(255) NOT NULL,
   `kategori` varchar(255) NOT NULL,
-  `gambar` text NOT NULL
+  `gambar_faskamar` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data untuk tabel `fasilitas_kamar`
 --
 
-INSERT INTO `fasilitas_kamar` (`id_faskamar`, `id_kamar`, `nama_faskamar`, `kategori`, `gambar`) VALUES
-(3, 1, 'tv', 'ukuran 23 inci', 'gambar.jpg');
+INSERT INTO `fasilitas_kamar` (`id_faskamar`, `nama_faskamar`, `kategori`, `gambar_faskamar`) VALUES
+(4, 'TV', 'Berukuran 32 inch', 'tv32inch.jpg'),
+(5, 'coffee maker', 'bebas pakai', 'coffee maker.jpg'),
+(6, 'AC', 'AC Sharp', 'ac.jpg'),
+(7, 'shower', 'Kamar mandi shower', 'shower.jpg'),
+(8, 'bathup', 'kamar mandi dengan bathup berukuran 1 orang', 'bathup.jpg'),
+(9, 'perlengkapan tidur', 'perlengkapan tidur dengan bantal, guling, seprai', 'perlengkapan tidur.jpg');
 
 -- --------------------------------------------------------
 
@@ -196,7 +204,7 @@ INSERT INTO `tipe_kamar` (`id_kamar`, `nama_kamar`, `jml_kamar`, `gambar_tipekam
 (1, 'Reguler room', 20, 'reguler room.jpg', 'Rp.350.000', 'memiliki 1 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
 (2, 'Silver Room', 20, 'silver room.jpg', 'Rp.500.000', 'memiliki 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
 (3, 'Goldroom', 20, 'gold room.jpg', 'Rp.700.000', 'memiliki 1 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
-(4, 'Platinum Room', 20, 'platinum room.jpg', 'Rp.800.000', 'memiliki 1 buah kasur berukuran 2 orang dan 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup.'),
+(4, '', 0, '', '', ''),
 (5, 'Deluxe Room', 20, 'deluxe room.jpg', 'Rp.950.000', 'memiliki 2 buah kasur berukuran 2 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup.');
 
 --
@@ -207,14 +215,15 @@ INSERT INTO `tipe_kamar` (`id_kamar`, `nama_kamar`, `jml_kamar`, `gambar_tipekam
 -- Indeks untuk tabel `fasilitas_hotel`
 --
 ALTER TABLE `fasilitas_hotel`
-  ADD PRIMARY KEY (`id_fashotel`);
+  ADD PRIMARY KEY (`id_fashotel`),
+  ADD KEY `nama_fashotel` (`nama_fashotel`);
 
 --
 -- Indeks untuk tabel `fasilitas_kamar`
 --
 ALTER TABLE `fasilitas_kamar`
   ADD PRIMARY KEY (`id_faskamar`),
-  ADD KEY `id_kamar` (`id_kamar`);
+  ADD KEY `nama_faskamar` (`nama_faskamar`);
 
 --
 -- Indeks untuk tabel `login`
@@ -244,13 +253,13 @@ ALTER TABLE `tipe_kamar`
 -- AUTO_INCREMENT untuk tabel `fasilitas_hotel`
 --
 ALTER TABLE `fasilitas_hotel`
-  MODIFY `id_fashotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_fashotel` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT untuk tabel `fasilitas_kamar`
 --
 ALTER TABLE `fasilitas_kamar`
-  MODIFY `id_faskamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_faskamar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT untuk tabel `login`
@@ -273,12 +282,6 @@ ALTER TABLE `tipe_kamar`
 --
 -- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
-
---
--- Ketidakleluasaan untuk tabel `fasilitas_kamar`
---
-ALTER TABLE `fasilitas_kamar`
-  ADD CONSTRAINT `fasilitas_kamar_ibfk_1` FOREIGN KEY (`id_kamar`) REFERENCES `tipe_kamar` (`id_kamar`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Ketidakleluasaan untuk tabel `pemesanan`

@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+          <!-- Required meta tags -->
+          <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- CSS -->
+      <link rel="stylesheet" href="<?= base_url('/assets/css/styles.css')?>">
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- CSS -->
     <link rel="stylesheet" href="<?=base_url('assets/css/style.css')?>">
-    <title>Admin</title>
+      <title>Admin</title>
+
 </head>
 <body>
     <!-- Header -->
     <?php $this->load->view('Admin/_partials/Header.php')?>
-    <div class="jumbotron jumbotron-fluid mb-5">
-      <div style="padding:300px; font-weight: normal;">
-        <h1 class="text-center text-white font-weight-bold">Selamat Datang</h1>
-        <h2 class="text-center text-white font-weight-bold">asdasd</h2>
-      </div>
-    </div>
-
+    <div class="jumbotron jumbotron-fluid mb-5"></div>
+    <p style="background-color: SteelBlue; height: 166px; margin: -48px 0px -100% 0px;">&nbsp</p>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
