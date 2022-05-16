@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 14 Bulan Mei 2022 pada 11.05
+-- Waktu pembuatan: 16 Bulan Mei 2022 pada 13.04
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -118,7 +118,8 @@ CREATE TABLE `login` (
 INSERT INTO `login` (`id_login`, `username`, `password`, `level`, `tgl_lahir`, `nowa`, `jenis_kelamin`, `nama`) VALUES
 (1, 'fraja', '123', 'tamu', '2022-04-01', '083112345678', 'laki-laki', 'Frajaramandaka'),
 (4, 'resepsionis', '12345', 'resepsionis', '2022-04-01', '081236523874', 'perempuan', 'resepsionis'),
-(5, 'admin', '12345678', 'admin', '2022-04-02', '0865419856', 'laki-laki', 'admin');
+(5, 'admin', '12345678', 'admin', '2022-04-02', '0865419856', 'laki-laki', 'admin'),
+(7, 'hendru', '123', 'tamu', '2022-05-02', '08893274587', 'laki-laki', 'hendru');
 
 -- --------------------------------------------------------
 
@@ -147,16 +148,9 @@ CREATE TABLE `pemesanan` (
 --
 
 INSERT INTO `pemesanan` (`id_pemesanan`, `nama_pemesan`, `email`, `no_hp`, `nama_tamu`, `id_kamar`, `tgl_cekin`, `tgl_cekout`, `jmlh_kamar`, `tipe_kamar`, `harga`, `status`, `KodReff`) VALUES
-(8, 'dimas', 'dimas@gmail.com', '081234567890', 'dimas', 1, '2022-04-21', '2022-04-22', 1, '', 0, 'checkout', '220421Thu4740'),
-(9, 'desu', 'desu@gmail.com', '081298563214', 'desu', 2, '2022-04-22', '2022-04-23', 1, '', 0, 'checkout', '220421Thu4847'),
-(10, 'oka', 'oka@gmail.com', '081289654785', 'oka', 2, '2022-04-23', '2022-04-24', 1, '', 0, 'checkout', '220421Thu1524'),
-(11, 'Sindi', 'Sindi@gmail.com', '081254126984', 'Sindi', 3, '2022-04-23', '2022-04-24', 1, '', 0, 'checkin', '220423Sat3235'),
-(12, 'Rani', 'Rani@gmail.com', '081245879658', 'Rani', 4, '2022-04-25', '2022-04-26', 1, '', 0, 'checkout', '220423Sat1217'),
-(13, 'Ginda', 'Ginda@gmail.com', '081265893254', 'Ginda', 4, '2022-04-26', '2022-04-27', 1, '', 0, 'checkin', '220423Sat1017'),
-(14, 'Vita', 'Vita@gmail.com', '0845217896', 'Vita', 3, '2022-05-14', '2022-05-15', 1, '', 0, 'checkout', '220514Sat1449'),
-(15, 'Vita', 'Vita@gmail.com', '0878546325', 'Vita', 3, '2022-05-14', '2022-05-15', 1, '', 0, 'checkout', '220514Sat2155'),
-(16, 'Vita', 'Vita@gmail.com', '0812454521', 'Vita', 1, '2022-05-14', '2022-05-15', 1, '', 0, 'checkout', '220514Sat2335'),
-(17, 'Vita', 'Vita@gmail.com', '24543252323', 'Vita', 2, '2022-05-14', '2022-05-15', 1, '', 0, 'checkout', '220514Sat2615');
+(23, 'fraja', 'fraja@gmail.com', '081254785415', 'fraja', 2, '2022-05-16', '2022-05-17', 1, '', 0, 'checkout', '220516Mon1553'),
+(24, 'fraja', 'fraja@gmail.com', '081245698745', 'fraja', 4, '2022-05-16', '2022-05-17', 1, '', 0, 'checkout', '220516Mon3931'),
+(25, 'hendru', 'hendru@gmail.com', '085698741256', 'hendru', 5, '2022-05-16', '2022-05-17', 1, '', 0, 'checkout', '220516Mon4036');
 
 --
 -- Trigger `pemesanan`
@@ -199,11 +193,11 @@ CREATE TABLE `tipe_kamar` (
 --
 
 INSERT INTO `tipe_kamar` (`id_kamar`, `nama_kamar`, `jml_kamar`, `gambar_tipekamar`, `harga`, `detail`) VALUES
-(1, 'Reguler Room', 10, 'reguler room.jpg', 'Rp.350.000', 'memiliki 1 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
-(2, 'Silver Room', 10, 'silver room.jpg', 'Rp.500.000', 'memiliki 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
-(3, 'Gold Room', 10, 'gold room.jpg', 'Rp.700.000', 'memiliki 1 buah kasur berukuran 2 orang dengan televisi berukuran 32 inci, serta memiliki 2 buah sofa dan meja untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan bathup.'),
-(4, 'Platinum Room', 10, 'platinum room.jpg', 'Rp.800.000', 'memiliki 1 buah kasur berukuran 2 orang dan 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup.'),
-(5, 'Deluxe Room', 10, 'deluxe room.jpg', 'Rp.950.000', 'memiliki 2 buah kasur berukuran 2 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup.');
+(1, 'Reguler room', 20, 'reguler room.jpg', 'Rp.350.000', 'memiliki 1 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
+(2, 'Silver Room', 20, 'silver room.jpg', 'Rp.500.000', 'memiliki 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
+(3, 'Goldroom', 20, 'gold room.jpg', 'Rp.700.000', 'memiliki 1 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja kecil untuk bersantai atau tempat bekerja, serta memiliki kamar mandi dengan shower.'),
+(4, 'Platinum Room', 20, 'platinum room.jpg', 'Rp.800.000', 'memiliki 1 buah kasur berukuran 2 orang dan 2 buah kasur berukuran 1 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup.'),
+(5, 'Deluxe Room', 20, 'deluxe room.jpg', 'Rp.950.000', 'memiliki 2 buah kasur berukuran 2 orang dengan televisi berukuran 32 inci, serta memiliki sofa dan meja untuk bersantai atau tempat bekerja, juga memiliki ruang makan untuk keluarga, dilengkapi kamar mandi dengan bathup.');
 
 --
 -- Indexes for dumped tables
@@ -262,13 +256,13 @@ ALTER TABLE `fasilitas_kamar`
 -- AUTO_INCREMENT untuk tabel `login`
 --
 ALTER TABLE `login`
-  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_login` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT untuk tabel `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_pemesanan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT untuk tabel `tipe_kamar`

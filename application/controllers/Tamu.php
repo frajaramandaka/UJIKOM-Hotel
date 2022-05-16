@@ -15,6 +15,9 @@ class Tamu extends CI_Controller {
         $this->db->select('*');
         $this->db->from('pemesanan');
         $this->db->join('tipe_kamar', 'tipe_kamar.id_kamar = pemesanan.id_kamar');
+        if (!empty($_SESSION['user']->username)) {
+        $this->db->where('nama_pemesan', $_SESSION['user']->username);
+        }
         $data['datapesanan']=$this->db->get('')->result();
         $this->load->view('Tamu/DataPesanan',$data);
     }
@@ -52,14 +55,10 @@ class Tamu extends CI_Controller {
         $this->db->from('pemesanan');
         $this->db->join('tipe_kamar', 'tipe_kamar.id_kamar = pemesanan.id_kamar');
         $this->db->where('status', 'checkout');
+        if (!empty($_SESSION['user']->username)){
+        $this->db->where('nama_pemesan', $_SESSION['user']->username);
+        }
         $data['datariwayat']=$this->db->get('')->result();
-        // foreach ($data['datariwayat'] as  $value) {
-        //     $this->db->where('id_pemesanan', $value->id_pemesanan);
-        //     $data['harga'] = "Rp " . number_format($value->harga,2,',','.');
-        //     var_dump($data['harga']);die;       
-        //     if (!empty($data['harga'])) {
-        //     }
-        // }
         return $this->load->view('Tamu/Riwayat', $data);        
     }
 

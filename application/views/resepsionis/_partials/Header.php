@@ -13,9 +13,6 @@
         <li class="nav-item">
           <a class="nav-link active" href="<?= base_url('Resepsionis/Riwayat'); ?>">Riwayat Pesanan</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="<?= base_url('Resepsionis/DataFasilitas'); ?>">Data   Fasilitas</a>
-        </li>
       </ul>
     </div>
       <ul class="navbar-nav">

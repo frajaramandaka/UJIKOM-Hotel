@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -25,7 +26,7 @@
                <div class="form-row">
                   <div class="form-group col-md-12">
                      <label for="inputEmail4">Nama Pemesan :</label>
-                     <input type="text" name="nama_pemesan" class="form-control" id="inputEmail4" placeholder="">
+                     <input type="text" name="nama_pemesan" class="form-control" id="inputEmail4"  value="<?= $_SESSION['user']->username ?>" readonly>
                   </div>
                   <div class="form-group col-md-12">
                      <label for="inputAddress">Tipe Kamar :</label>
@@ -35,6 +36,7 @@
                         <option value="2">Silver Room</option>
                         <option value="3">Gold Room</option>
                         <option value="4">Platinum Room</option>
+                        <option value="5">Deluxe Room</option>
                      </select>
                   </div>
                </div>

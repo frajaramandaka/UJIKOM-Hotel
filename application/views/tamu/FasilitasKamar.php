@@ -17,7 +17,77 @@
   <?php $this->load->view('tamu/_partials/Header.php')?>
   <div class="jumbotron jumbotron-fluid mb-5"></div>
 
-  
+  <div class="container" style="margin-bottom: 400px;">
+  <h2 class="text-center bg-warning rounded" style="height: 50px; margin-bottom: 0px;">Fasilitas Kamar</h2>
+  <div class="card p-4">
+  <div class="row row-cols-1 row-cols-md-3 g-5">
+  <div class="col">
+    <div class="card">
+      <img src="<?= base_url('assets/image/tv32inch.jpg')?>" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">TV Ukuran 32 inch</h5>
+        <hr>
+        <p class="card-text">TV berukuran 32 inch agar tamu semakin puas saat menonton tayangan televisi.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="<?= base_url('assets/image/coffee maker.jpg')?>" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Coffee Maker</h5>
+        <hr>
+        <p class="card-text">Coffee Maker untuk tamu jika ingin membuat kopi.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="<?= base_url('assets/image/ac.jpg')?>" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">AC</h5>
+        <hr>
+        <p class="card-text">AC agar suasana terasa lebih sejuk.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="<?= base_url('assets/image/shower.jpg')?>" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Shower</h5>
+        <hr>
+        <p class="card-text">Hanya dimiliki pada kamar tipe reguler dan silver.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="<?= base_url('assets/image/bathup.jpg')?>" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Bathup</h5>
+        <hr>
+        <p class="card-text">Hanya dimiliki pada kamar tipe gold, platinum, dan deluxe.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="<?= base_url('assets/image/perlengkapan tidur.jpg')?>" class="card-img-top" alt="">
+      <div class="card-body">
+        <h5 class="card-title">Perlengkapan Tidur</h5>
+        <hr>
+        <p class="card-text">Perlengkapan tidur berupa bantal dan guling yang  disimpan di lemari untuk pengunjung jika ingin mengganti perlengkapan tidurnya.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="card-footer p-3 rounded" style="background-color: Gold;"></div>
+</div>
+
 
   <!-- Footer-->
   <?php $this->load->view('tamu/_partials/Footer.php')?>
